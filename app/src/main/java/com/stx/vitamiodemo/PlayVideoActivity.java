@@ -1,5 +1,6 @@
 package com.stx.vitamiodemo;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
@@ -20,7 +21,7 @@ import io.vov.vitamio.widget.VideoView;
  */
 public class PlayVideoActivity extends AppCompatActivity implements MediaPlayer.OnInfoListener, MediaPlayer.OnBufferingUpdateListener{
     //视频地址
-    private String path = "http://baobab.wdjcdn.com/145076769089714.mp4";
+    private String path;
     private Uri uri;
     private ProgressBar pb;
     private TextView downloadRateView, loadRateView;
@@ -43,6 +44,8 @@ public class PlayVideoActivity extends AppCompatActivity implements MediaPlayer.
 //            return;
 //        }
         setContentView(R.layout.activity_play_video);
+        Intent intent = getIntent();
+        path = intent.getStringExtra("video_address");
         initView();
         initData();
     }

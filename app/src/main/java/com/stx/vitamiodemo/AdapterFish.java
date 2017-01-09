@@ -2,6 +2,7 @@ package com.stx.vitamiodemo;
 
 import android.content.Context;
 import android.content.Intent;
+import android.provider.ContactsContract;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -43,9 +44,9 @@ public class AdapterFish extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         MyHolder myHolder= (MyHolder) holder;
         DataFish current=data.get(position);
         myHolder.textFishName.setText(current.fishName);
-        myHolder.textSize.setText("Size: " + current.sizeName);
-        myHolder.textType.setText("Category: " + current.catName);
-        myHolder.textPrice.setText("Rs. " + current.price + "\\Kg");
+        myHolder.textSize.setText("desc: " + current.sizeName);
+        myHolder.textType.setText("address: " + current.catName);
+        myHolder.textPrice.setText("time: " + current.price);
         myHolder.textPrice.setTextColor(ContextCompat.getColor(context, R.color.colorAccent));
 
     }
@@ -77,12 +78,13 @@ public class AdapterFish extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         // Click event for all items
         @Override
         public void onClick(View v) {
-            int position = getAdapterPosition();
 
+            int position = getAdapterPosition();
+            DataFish current = data.get(position);
+            //Toast.makeText(context, current.catName, Toast.LENGTH_SHORT).show();
             Context context = v.getContext();
             Intent intent = new Intent(context, PlayVideoActivity.class);
-            String test = "http://baobab.wdjcdn.com/145076769089714.mp4";
-            intent.putExtra("video_address", test);
+            intent.putExtra("video_address", current.catName);
 
             //Toast.makeText(context, "You clicked an item", Toast.LENGTH_SHORT).show();
             context.startActivity(intent);

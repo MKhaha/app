@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()){
             case R.id.button1:
                 Intent intent = new Intent(MainActivity.this, PlayVideoActivity.class);
+                intent.putExtra("video_address", "rtsp://218.75.127.36:554/video1.mpg");
                 startActivity(intent);
                 break;
             case R.id.button2:

@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="fish name"
+        android:text="title"
         android:id="@+id/textFishName"
         android:layout_marginLeft="5dp"/>
 
@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="price"
+        android:text="time"
         android:id="@+id/textPrice"
         android:textColor="@color/colorAccent"
         android:layout_alignParentRight="true"
