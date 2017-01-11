@@ -28,6 +28,7 @@ public class PlayVideoActivity extends AppCompatActivity implements MediaPlayer.
     private MediaController mMediaController;
     private CustomMediaController mCustomMediaController;
     private VideoView mVideoView;
+    private String videoName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,16 +47,17 @@ public class PlayVideoActivity extends AppCompatActivity implements MediaPlayer.
         setContentView(R.layout.activity_play_video);
         Intent intent = getIntent();
         path = intent.getStringExtra("video_address");
-        initView();
+        videoName = intent.getStringExtra("video_name");
+        initView(videoName);
         initData();
     }
 
     //初始化控件
-    private void initView() {
+    private void initView(String videoName) {
         mVideoView = (VideoView) findViewById(R.id.buffer);
         mMediaController= new MediaController(this);
         mCustomMediaController=new CustomMediaController(this,mVideoView,this);
-        mCustomMediaController.setVideoName("白火锅 x 红火锅");
+        mCustomMediaController.setVideoName(videoName);
         pb = (ProgressBar) findViewById(R.id.probar);
         downloadRateView = (TextView) findViewById(R.id.download_rate);
         loadRateView = (TextView) findViewById(R.id.load_rate);

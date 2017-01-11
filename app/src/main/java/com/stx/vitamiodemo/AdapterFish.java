@@ -85,6 +85,7 @@ public class AdapterFish extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             Context context = v.getContext();
             Intent intent = new Intent(context, PlayVideoActivity.class);
             intent.putExtra("video_address", current.catName);
+            intent.putExtra("video_name", current.fishName);
 
             //Toast.makeText(context, "You clicked an item", Toast.LENGTH_SHORT).show();
             context.startActivity(intent);
