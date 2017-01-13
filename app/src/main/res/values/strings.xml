@@ -3,4 +3,8 @@
     <string name="test_button">视频测试</string>
     <string name="search_button">搜索</string>
     <string name="searchTextEditHint">输入你希望搜索的关键词，如“缝制”</string>
+    <string name="machineryIndustry">机械</string>
+    <string name="food">食品</string>
+    <string name="furniture">家具</string>
+    <string name="emptyActivityText">尚未开通服务，敬请期待</string>
 </resources>
