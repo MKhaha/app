@@ -11,7 +11,7 @@
     tools:context="com.stx.vitamiodemo.MainActivity">
 
     <Button
-        android:text="startVideo"
+        android:text="@string/test_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button1" />
@@ -20,12 +20,12 @@
         android:layout_below="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="what you want to search?"
+        android:hint="@string/searchTextEditHint"
         android:maxLines="2"
         android:id="@+id/editText" />
 
     <Button
-        android:text="search"
+        android:text="@string/search_button"
         android:layout_below="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
