@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">IECloud</string>
-    <string name="test_button">视频测试</string>
     <string name="search_button">搜索</string>
     <string name="searchTextEditHint">输入你希望搜索的关键词，如“缝制”</string>
     <string name="machineryIndustry">机械</string>
     <string name="food">食品</string>
     <string name="furniture">家具</string>
     <string name="emptyActivityText">尚未开通服务，敬请期待</string>
+    <string name="poster">IE云智能是一家专注于智能制造顶层设计及实施的服务类公司，本应用为公司其中一款产品，致力于行业从业人员整体水平的提高和智能制造的推广</string>
 </resources>

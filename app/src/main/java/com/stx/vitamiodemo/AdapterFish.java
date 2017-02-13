@@ -46,7 +46,7 @@ public class AdapterFish extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         myHolder.textFishName.setText(current.fishName);
         myHolder.textSize.setText("desc: " + current.sizeName);
         myHolder.textType.setText("address: " + current.catName);
-        myHolder.textPrice.setText("time: " + current.price);
+        myHolder.textPrice.setText("size: " + current.price + "B");
         myHolder.textPrice.setTextColor(ContextCompat.getColor(context, R.color.colorAccent));
 
     }
